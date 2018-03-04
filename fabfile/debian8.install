@@ -1,0 +1,50 @@
+apt-get install python3-pip python3-dev virtualenv nginx postgresql postgresql-contrib libpq-dev sudo gcc
+apt-get install libpq-dev python-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev
+apt-get install libpcre3-dev build-essential libssl-dev
+apt-get install git
+cd /home/
+git clone https://github.com/DAKZH/betgames.git
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+pip install -r requirements.txt
+pip install gunicorn
+pip install psycopg2
+
+
+touch /etc/systemd/system/django.service
+
+[Unit]
+Description=Django with Gunicorn
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/betgames
+ExecStart=/usr/local/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 betgames.wsgi
+
+[Install]
+WantedBy=multi-user.target
+
+
+systemctl enable django.service
+systemctl start django.service
+
+sudo wget http://nginx.org/download/nginx-1.11.2.tar.gz
+
+sudo tar -zxvf nginx-1.*.tar.gz
+cd /nginx-1.*
+
+./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-http_ssl_module --with-ipv6
+adduser --system --no-create-home --disabled-login --disabled-password --group nginx
+systemctl start nginx
+systemctl enable nginx
+
+sudo make
+sudo make install
+
+
+copy nginx.conf file
+
+systemctl enable nginx
+systemctl start nginx

@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+WRONG_PASSWORD_M = u"Неверный логин или пароль"
+USER_ALREADY_EXISTS_M = u"Пользователь уже зарегистрирован"
+NOT_VALID_PASSWORD_M = u"Минимальная длина пароля 4 символа"
+MISSING_REQUIRED_PARAMS = u"Отсутствуют обязательные данные формы"
+CATEGORY_NOT_FOUND = u"Категория не найдена"
+COMPANY_NOT_FOUND = u"Компания не найдена"
+SHOP_NOT_FOUND = u"Магазин не найден"
+USER_NOT_FOUND = u"Пользователь не найден"
+OBJECT_NOT_FOUND = u"Объект не найден"
+
+PRICE_LIST_NOT_FOUND = u"Прайс лист компании не существует"
+INTEGER_REQUIRED = u"Нужен числовой формат"
+
+VALIDATION_MESSAGE = u"Неверный формат"
+LENGTH_DOES_NOT_MATCH = u"Продукты и их кол-во не совпадают"
+OLD_PRICE_LIST = u"Прайс лист не актуален"
+ITEM_NOT_YOURS = u"Товары не пренадлежат текущей компании"
+ONLY_ONE_METHOD_ALLOWED = u"Cannot change by percent and amount simultaneously"
+
+WRONG_JSON_FORMAT_MESSAGE = u"Неверный JSON формат"
+REQUEST_EDITOR_REQUIRED = u"Требуется ответственный за заявку"
+UNEDITABLE_REQUEST = u"Заявка неизменяема"
+WRONG_NEW_STATUS = u"Неверный статус заявки"
+WRONG_KEY = u"Неверный ключ"
+
+WRONG_FORMAT = u"Неверный формат номера"
+WRONG_DATE = u"Неверная дата"
+ITEM_NOT_FOUND = u"Продукт не найден"
+ACTION_ALREADY_ACTIVE = u"Акция на товар уже активна"
