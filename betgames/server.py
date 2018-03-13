@@ -33,10 +33,10 @@ LOGGING = {
     },
     'handlers': {
         'info': {
-            'level':'INFO',
-            'class':'logging.handlers.RotatingFileHandler',
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/main.log'),
-            'maxBytes': 1024*1024*15, # 15MB
+            'maxBytes': 1024*1024*15,   # 15MB
             'backupCount': 10,
             'formatter': 'verbose'
         },

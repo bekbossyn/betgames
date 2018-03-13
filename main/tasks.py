@@ -257,7 +257,6 @@ def dice_duel():
     return 0
 
 
-
 @shared_task
 def clear_data():
     """
