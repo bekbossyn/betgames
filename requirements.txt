@@ -19,7 +19,7 @@ idna==2.6
 ipaddress==1.0.18
 kombu==4.1.0
 lxml==3.8.0
-paramiko==2.2.1
+paramiko==2.10.1
 pyasn1==0.3.2
 pycparser==2.18
 PyJWT==1.5.2
